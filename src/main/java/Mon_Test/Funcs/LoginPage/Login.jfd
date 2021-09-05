@@ -1,0 +1,105 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.11" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "centralText"
+					"text": "学生成绩管理系统"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 140
+					"y": 35
+					"width": 100
+					"height": 28
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "passText"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 150
+					"y": 120
+					"width": 130
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "loginBt"
+					"text": "登录"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "loginBtMouseClicked", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 30
+					"x": 205
+					"y": 205
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "findBt"
+					"text": "忘记密码"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 95
+					"y": 205
+					"width": 80
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "status"
+					"text": "身份"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 35
+					"height": 25
+					"x": 100
+					"y": 165
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "password"
+					"text": "密码"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 35
+					"height": 25
+					"x": 100
+					"y": 120
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "userText"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 150
+					"y": 80
+					"width": 130
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "user"
+					"text": "账号"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 100
+					"y": 80
+					"width": 35
+					"height": 25
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "statusText"
+					"selectedIndex": -1
+					"maximumRowCount": 3
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "学生"
+						addElement( "学生" )
+						addElement( "教师" )
+						addElement( "后台人员" )
+					}
+					addEvent( new FormEvent( "java.beans.PropertyChangeListener", "propertyChange", "statusTextPropertyChange", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 150
+					"y": 165
+					"width": 130
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 5
+				"height": 255
+				"width": 385
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
